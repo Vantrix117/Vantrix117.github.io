@@ -15,7 +15,7 @@
     return;
   }
   var path = location.pathname.slice(BASE.length);
-  if (!path || path === '/index.html') path = '/';
+  if (!path || path === '/index.html' || path === '/README.html') path = '/';   // the guide is no longer published
   var target = NEW.replace(/\/$/, '') + path + location.search;
   var oldHash = location.hash ? location.hash.slice(1) : '';
   var go = document.getElementById('go'); if (go) go.href = target + (oldHash ? '#' + oldHash : '');
